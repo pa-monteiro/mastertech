@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+}
+#main {
+    display: grid;
+    grid-template-areas: 'header header header'
+                         'nav nav aside'
+                         'section section aside'
+                         'footer footer footer';
+
+    grid-auto-rows: 10vh 15vh 50vh 50vh;
+    grid-column-gap: 10px;
+}
+header {
+    grid-area: header;
+    background-color:rgb(199, 199, 199);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header a{
+    color: black;
+    font-size: 12pt;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header a:nth-child(4){
+    color: green;
+    font-size: 16pt;
+}
+header a:hover {
+    font-size: 13pt;
+    font-weight: bolder;
+}
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav h1{
+    color: blue;
+    font-size: 25pt;
+}
+aside {
+    grid-area: aside;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+aside p{
+    width: 150px;
+    color: white;
+    font-size: 10pt;
+}
+aside h2{
+    font-size: 14pt;
+    color: white;
+}
+section {
+    grid-area: section;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+section img {
+    width: 400px;
+    height: 300px;
+}
+footer {
+    grid-area: footer;
+    background-color: yellow;
+}
